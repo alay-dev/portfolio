@@ -76,8 +76,9 @@ export const Hero = styled.section`
     object-position: top;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     padding: 0 0.5rem;
+    margin-bottom: 0;
   }
 `;
 
@@ -199,7 +200,7 @@ export const ProjectThumb = styled.div`
     height: 25rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     width: 22rem;
     height: 16rem;
   }
@@ -222,7 +223,7 @@ export const Languages = styled.section`
     padding: 0 2rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     padding: 0rem 0.5rem;
   }
 `;
@@ -260,7 +261,7 @@ export const LanguageCard = styled.div`
   background-color: #eee;
   flex-shrink: 0;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     width: 22rem;
     height: 6rem;
   }
@@ -286,7 +287,7 @@ export const GetInTouch = styled.section`
     padding: 2rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     padding: 2rem 0.5rem;
   }
 `;
@@ -318,7 +319,7 @@ export const Form = styled.form`
     width: max-content;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     width: 100%;
   }
 `;
@@ -328,7 +329,7 @@ export const FormFlex = styled.div`
   gap: 3rem;
   width: 100%;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
     flex-direction: column;
   }
 `;
