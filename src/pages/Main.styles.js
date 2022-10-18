@@ -77,7 +77,7 @@ export const Hero = styled.section`
   }
 
   @media only screen and (max-width: 450px) {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     margin-bottom: 0;
   }
 `;
@@ -187,6 +187,10 @@ export const Projects = styled.div`
   justify-content: center;
   margin-top: 6rem;
   gap: 3.5rem;
+
+  @media only screen and (max-width: 450px) {
+    gap: 2rem;
+  }
 `;
 
 export const ProjectThumb = styled.div`
@@ -224,7 +228,7 @@ export const Languages = styled.section`
   }
 
   @media only screen and (max-width: 450px) {
-    padding: 0rem 0.5rem;
+    padding: 0rem 1rem;
   }
 `;
 
@@ -249,6 +253,10 @@ export const LanguageCardGrid = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 450px) {
+    gap: 1.5rem;
+  }
 `;
 
 export const LanguageCard = styled.div`
@@ -263,7 +271,7 @@ export const LanguageCard = styled.div`
 
   @media only screen and (max-width: 450px) {
     width: 22rem;
-    height: 6rem;
+    height: 8rem;
   }
 `;
 
@@ -288,7 +296,7 @@ export const GetInTouch = styled.section`
   }
 
   @media only screen and (max-width: 450px) {
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
   }
 `;
 
