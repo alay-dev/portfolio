@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   ConnectBtn,
@@ -19,6 +19,7 @@ import {
   MessageInput,
   Projects,
   ProjectThumb,
+  ProjectThumbActive,
   RecentWork,
   RecentWorkContent,
   SkillCard,
@@ -36,8 +37,24 @@ import WaveBottomMobile from '../assets/waveBottomMobile.svg';
 import GetInTouchImg from '../assets/getInTouch.gif';
 import LinkedInImg from '../assets/linkedin.png';
 import MailImg from '../assets/mail.png';
+import ReactJsLogo from '../assets/reactJs.png';
+import NextJsLogo from '../assets/nextJs.png';
+import MuiLogo from '../assets/muiLogo.svg';
+import SassLogo from '../assets/sass.png';
+import CssLogo from '../assets/css.png';
+import HtmlLogo from '../assets/html.png';
+import AwsLogo from '../assets/aws.png';
+import MongodbLogo from '../assets/mongodb.png';
+import NodejsLogo from '../assets/nodeJs.png';
+import ServerlessLogo from '../assets/serverless.png';
+import SqlLogo from '../assets/sql.png';
+import GolangLogo from '../assets/golang.png';
+import JavascriptLogo from '../assets/javascript.png';
+import ExpressJsLogo from '../assets/expressJs.png';
+import CppLogo from '../assets/cpp.png';
 
 const Main = () => {
+  const [projectActive, setProjectActive] = useState(0);
   return (
     <Wrapper>
       <Header>
@@ -85,10 +102,62 @@ const Main = () => {
           <h2>My Recent Work</h2>
           <p>Here are some of the projects i have worked on</p>
           <Projects>
-            <ProjectThumb></ProjectThumb>
-            <ProjectThumb></ProjectThumb>
-            <ProjectThumb></ProjectThumb>
-            <ProjectThumb></ProjectThumb>
+            <ProjectThumb
+              bg="#cddc39"
+              onMouseEnter={() => setProjectActive(1)}
+              onMouseLeave={() => setProjectActive(0)}
+            >
+              {projectActive === 1 ? (
+                <ProjectThumbActive>
+                  <a href="https://github.com/alay-dev/megastore-frontend">
+                    <Button>View project</Button>
+                  </a>
+                </ProjectThumbActive>
+              ) : (
+                <>
+                  <h3>Mega Store</h3>
+                  <p>Grocery store web app</p>{' '}
+                </>
+              )}
+            </ProjectThumb>
+            <ProjectThumb
+              bg="#64b5f6"
+              onMouseEnter={() => setProjectActive(2)}
+              onMouseLeave={() => setProjectActive(0)}
+            >
+              {' '}
+              {projectActive === 2 ? (
+                <ProjectThumbActive>
+                  <a href="https://github.com/alay-dev/mycreativeside">
+                    <Button>View project</Button>
+                  </a>
+                </ProjectThumbActive>
+              ) : (
+                <>
+                  <h3>My Creative Side</h3>
+                  <p>Blogging web app</p>
+                </>
+              )}
+            </ProjectThumb>
+            <ProjectThumb
+              bg="#ef9a9a"
+              onMouseEnter={() => setProjectActive(3)}
+              onMouseLeave={() => setProjectActive(0)}
+            >
+              {' '}
+              {projectActive === 3 ? (
+                <ProjectThumbActive>
+                  <a href="https://github.com/alay-dev/youtube-clone">
+                    <Button>View project</Button>{' '}
+                  </a>
+                </ProjectThumbActive>
+              ) : (
+                <>
+                  <h3>YouTube Clone</h3>
+                  <p>Youtube clone </p>
+                </>
+              )}
+            </ProjectThumb>
           </Projects>
         </RecentWorkContent>
         <img
@@ -97,34 +166,85 @@ const Main = () => {
         />
       </RecentWork>
       <Languages>
-        <h2>Languages I Speak & skills</h2>
+        <h2>Skills</h2>
 
         <LanguageSection>
           <h3>Front-end</h3>
           <LanguageCardGrid>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
+            <LanguageCard>
+              <img src={ReactJsLogo} />
+              <p>React Js</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={NextJsLogo} />
+              <p>Next Js</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={HtmlLogo} />
+              <p>HTML</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={CssLogo} />
+              <p>CSS</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={JavascriptLogo} />
+              <p>Javascript</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={SassLogo} />
+              <p>Sass</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={MuiLogo} />
+              <p>Material UI</p>
+            </LanguageCard>
           </LanguageCardGrid>
         </LanguageSection>
         <LanguageSection>
           <h3>Back-end</h3>
           <LanguageCardGrid>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
+            <LanguageCard>
+              <img src={NodejsLogo} />
+              <p>Node Js</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={ExpressJsLogo} />
+              <p>Express Js</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={JavascriptLogo} />
+              <p>Javascript</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={MongodbLogo} />
+              <p>Mongo DB</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={SqlLogo} />
+              <p>SQL</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={AwsLogo} />
+              <p>AWS</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={ServerlessLogo} />
+              <p>Serverless</p>
+            </LanguageCard>
           </LanguageCardGrid>
         </LanguageSection>
         <LanguageSection>
           <h3>Others</h3>
           <LanguageCardGrid>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
-            <LanguageCard></LanguageCard>
+            <LanguageCard>
+              <img src={GolangLogo} />
+              <p>Go lang</p>
+            </LanguageCard>
+            <LanguageCard>
+              <img src={CppLogo} />
+              <p>C++</p>
+            </LanguageCard>
           </LanguageCardGrid>
         </LanguageSection>
       </Languages>

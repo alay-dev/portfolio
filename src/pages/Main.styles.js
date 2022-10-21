@@ -86,15 +86,14 @@ export const Skills = styled.section`
   padding: 2rem 6rem;
 
   @media only screen and (max-width: 1000px) {
-    padding: 2rem;
-  }
-
-  @media only screen and (max-width: 1000px) {
     padding: 2rem 2rem 0;
   }
 
-  & > *:nth-child(odd) {
-    flex-direction: column-reverse;
+  @media only screen and (max-width: 550px) {
+    padding: 2rem 0;
+    & > *:nth-child(odd) {
+      flex-direction: column-reverse;
+    }
   }
 `;
 
@@ -134,6 +133,10 @@ export const SkillCard = styled.div`
     color: #835fae;
     text-align: center;
     font-weight: 300;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
   }
 `;
 
@@ -197,7 +200,28 @@ export const ProjectThumb = styled.div`
   width: 35rem;
   height: 28rem;
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: ${(props) => props.bg};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 500;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #2e2693;
+  }
 
   @media only screen and (max-width: 600px) {
     width: 30rem;
@@ -208,6 +232,19 @@ export const ProjectThumb = styled.div`
     width: 22rem;
     height: 16rem;
   }
+`;
+
+export const ProjectThumbActive = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const Languages = styled.section`
@@ -264,10 +301,25 @@ export const LanguageCard = styled.div`
   height: 10rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1rem;
   border-radius: 1rem;
   background-color: #eee;
   flex-shrink: 0;
+
+  img {
+    width: 6rem;
+    object-fit: contain;
+    margin-right: 1rem;
+
+    @media only screen and (max-width: 450px) {
+      width: 4rem;
+    }
+  }
+
+  p {
+    font-size: 2rem;
+  }
 
   @media only screen and (max-width: 450px) {
     width: 22rem;
