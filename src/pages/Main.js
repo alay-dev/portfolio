@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Button,
   ConnectBtn,
@@ -53,8 +53,16 @@ import JavascriptLogo from '../assets/javascript.png';
 import ExpressJsLogo from '../assets/expressJs.png';
 import CppLogo from '../assets/cpp.png';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Main = () => {
   const [projectActive, setProjectActive] = useState(0);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Wrapper>
       <Header>
@@ -64,30 +72,31 @@ const Main = () => {
         </HeaderLeft>
       </Header>
       <Hero>
-        <h1>Self Taught Full Stack Developer</h1>
+        <h1>Full Stack Developer</h1>
         <p>
-          Hi! I am Alay, I code beautifully simple things, and I love what I do.{' '}
+          Hi! I am Alay, I love to code that makes the web simpler and
+          attractive to users.
         </p>
-        <img src={AlayImg} />
+        <img data-aos="fade-up" src={AlayImg} />
       </Hero>
       <Skills>
-        <SkillFlex>
+        <SkillFlex data-aos="fade-up">
           <SkillCard>
             <h2>Front-end development</h2>
             <p>
-              Responsive websites built for an optimal user experience that
-              achieves your business goals.
+              Responsive websites with user interaction for an optimal user
+              experience.
             </p>
           </SkillCard>
           <img src={Frontend} />
         </SkillFlex>
-        <SkillFlex>
+        <SkillFlex data-aos="fade-up">
           <img src={Backend} />
           <SkillCard>
             <h2>Back-end development</h2>
             <p>
-              Responsive websites built for an optimal user experience that
-              achieves your business goals.
+              Fast and secure backend with the best technologies for achieving
+              your business goals.
             </p>
           </SkillCard>
         </SkillFlex>
@@ -103,6 +112,8 @@ const Main = () => {
           <p>Here are some of the projects i have worked on</p>
           <Projects>
             <ProjectThumb
+              data-aos="zoom-in"
+              data-aos-delay="0"
               bg="#cddc39"
               onMouseEnter={() => setProjectActive(1)}
               onMouseLeave={() => setProjectActive(0)}
@@ -121,6 +132,8 @@ const Main = () => {
               )}
             </ProjectThumb>
             <ProjectThumb
+              data-aos="zoom-in"
+              data-aos-delay="100"
               bg="#64b5f6"
               onMouseEnter={() => setProjectActive(2)}
               onMouseLeave={() => setProjectActive(0)}
@@ -140,6 +153,8 @@ const Main = () => {
               )}
             </ProjectThumb>
             <ProjectThumb
+              data-aos="zoom-in"
+              data-aos-delay="200"
               bg="#ef9a9a"
               onMouseEnter={() => setProjectActive(3)}
               onMouseLeave={() => setProjectActive(0)}
@@ -171,31 +186,31 @@ const Main = () => {
         <LanguageSection>
           <h3>Front-end</h3>
           <LanguageCardGrid>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={ReactJsLogo} />
               <p>React Js</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={NextJsLogo} />
               <p>Next Js</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={HtmlLogo} />
               <p>HTML</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={CssLogo} />
               <p>CSS</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={JavascriptLogo} />
               <p>Javascript</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={SassLogo} />
               <p>Sass</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={MuiLogo} />
               <p>Material UI</p>
             </LanguageCard>
@@ -204,31 +219,31 @@ const Main = () => {
         <LanguageSection>
           <h3>Back-end</h3>
           <LanguageCardGrid>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={NodejsLogo} />
               <p>Node Js</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={ExpressJsLogo} />
               <p>Express Js</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={JavascriptLogo} />
               <p>Javascript</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={MongodbLogo} />
               <p>Mongo DB</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={SqlLogo} />
               <p>SQL</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={AwsLogo} />
               <p>AWS</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={ServerlessLogo} />
               <p>Serverless</p>
             </LanguageCard>
@@ -237,11 +252,11 @@ const Main = () => {
         <LanguageSection>
           <h3>Others</h3>
           <LanguageCardGrid>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={GolangLogo} />
               <p>Go lang</p>
             </LanguageCard>
-            <LanguageCard>
+            <LanguageCard data-aos="zoom-in">
               <img src={CppLogo} />
               <p>C++</p>
             </LanguageCard>

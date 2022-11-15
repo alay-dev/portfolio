@@ -266,6 +266,7 @@ export const Languages = styled.section`
 
   @media only screen and (max-width: 450px) {
     padding: 0rem 1rem;
+    margin-top: -10rem;
   }
 `;
 
@@ -328,6 +329,7 @@ export const LanguageCard = styled.div`
 `;
 
 export const GetInTouch = styled.section`
+  margin-top: 10rem;
   padding: 2rem 8rem;
   margin-bottom: 4rem;
 
